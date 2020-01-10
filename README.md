@@ -131,7 +131,7 @@ kubectl config set-context $(kubectl config current-context) --namespace=<NAMESP
 Apply the deployment
 
 ```
-kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/deployement.yaml
 ```
 
 ## Service
