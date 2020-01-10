@@ -4,6 +4,10 @@
 
 This is a very simple demo application to demonstrate container technologies and container orchestration. Hopefully by the end of this we will all learn some useful basics. 
 
+## Sign Up for a cloud account
+
+ibm.biz/impactday2
+
 ## Docker
 
 Docker is almost synonymous with container technologies and for good reason. They were one of the first in the industry to make it easy for developers to create containers.
@@ -64,7 +68,17 @@ Public dockerhub is great for learning about docker images and getting other peo
 
 IBM Cloud gives you a free image registry.
 
+
+
 ## Kubernetes
+
+Go to cloud shell
+
+```
+https://workshop.shell.cloud.ibm.com/
+```
+
+If it asks for a key use `ikslab`.
 
 Login to your IBM Cloud account. On the top right on your name click the drop down and select the IBM account. 
 
@@ -110,4 +124,20 @@ Find the namespace with your first name.
 
 ```
 kubectl config set-context $(kubectl config current-context) --namespace=<NAMESPACE>
+```
+
+## Deployments
+
+Apply the deployment
+
+```
+kubectl apply -f k8s/deployment.yaml
+```
+
+## Service
+
+Apply the service
+
+```
+kubectl apply -f k8s/service.yaml
 ```
