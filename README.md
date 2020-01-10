@@ -95,3 +95,19 @@ This sets the `kubectl` with the right config.
 ## Using Kubernetes
 
 Work along with your instructor to deploy the application to Kubernetes.
+
+## Set Namespace
+
+In the cluster each of you have a namespace. These are names taken from the program.
+
+To use the namespace for you use 
+
+```
+kubectl get ns
+```
+
+Find the namespace with your first name.
+
+```
+kubectl config set-context $(kubectl config current-context) --namespace=<NAMESPACE>
+```
