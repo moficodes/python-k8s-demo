@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name:  qotd
+  labels:
+    name:  qotd
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name:  qotd
+    spec:
+      containers:
+      - image:  moficodes/impact-qotd:v1.0.1
+        name:  qotd
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128M"
+          limits: 
+            cpu: "100m"
+            memory: "128M"
+        imagePullPolicy: Always
+      restartPolicy: Always
