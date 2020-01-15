@@ -1,4 +1,4 @@
-# Impact Labs Summit 2020
+# IBM Developer NY Meetup January 2020
 
 ## Container and Container Orchestration
 
@@ -68,8 +68,6 @@ Public dockerhub is great for learning about docker images and getting other peo
 
 IBM Cloud gives you a free image registry.
 
-
-
 ## Kubernetes
 
 Go to cloud shell
@@ -80,17 +78,7 @@ https://workshop.shell.cloud.ibm.com/
 
 If it asks for a key use `ikslab`.
 
-Login to your IBM Cloud account. On the top right on your name click the drop down and select the IBM account. 
-
-In your dashboard you should see a cluster. 
-
-From terminal
-
-```
-ibmcloud login --sso
-```
-
-Select the second account (with number 1323..)
+Login to your IBM Cloud account. In your dashboard you should see a cluster. 
 
 ```
 ibmcloud ks clusters
@@ -99,39 +87,19 @@ ibmcloud ks clusters
 This would list all the clusters. You should see only one.
 
 ```
-ibmcloud ks cluster-config -c impact-labs-summit
+ibmcloud ks cluster-config -c $CLUSTER-NAME
 ```
 
 This will print a `export KUBECONFIG=...` command. Copy and paste that in your terminal.
 
 This sets the `kubectl` with the right config.
 
-## Using Kubernetes
-
-Work along with your instructor to deploy the application to Kubernetes.
-
-## Set Namespace
-
-In the cluster each of you have a namespace. These are names taken from the program.
-
-To use the namespace for you use 
-
-```
-kubectl get ns
-```
-
-Find the namespace with your first name.
-
-```
-kubectl config set-context $(kubectl config current-context) --namespace=<NAMESPACE>
-```
-
 ## Deployments
 
 Apply the deployment
 
 ```
-kubectl apply -f k8s/deployement.yaml
+kubectl apply -f k8s/deployment.yaml
 ```
 
 ## Service
