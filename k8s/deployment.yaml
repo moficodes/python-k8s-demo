@@ -16,7 +16,7 @@ spec:
         name:  qotd
     spec:
       containers:
-      - image:  moficodes/impact-qotd:v1.0.1
+      - image:  pnbrown/impact-qotd:v1.0.1
         name:  qotd
         resources:
           requests:
