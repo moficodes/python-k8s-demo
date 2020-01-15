@@ -11,7 +11,7 @@ def read_quotes(filename):
 
 @app.route("/")
 def index():
-    return "Impact Labs Summit"
+    return "IBM Developer NYC Meetup Flask Demo. Append /hello/$your_name to the url."
 
 # @app.route("/hello/<string:name>")
 @app.route("/hello/<string:name>/")
