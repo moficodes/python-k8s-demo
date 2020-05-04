@@ -1,12 +1,11 @@
-# IBM Developer NY Meetup January 2020
+# IBM Developer NY Meetup May 2020
 
 ## Container and Container Orchestration
 
 This is a very simple demo application to demonstrate container technologies and container orchestration. Hopefully by the end of this we will all learn some useful basics. 
 
 ## Sign Up for a cloud account
-
-ibm.biz/impactday2
+ https://ibm.biz/BdqF8K 
 
 ## Docker
 
