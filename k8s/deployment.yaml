@@ -1,29 +1,19 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name:  qotd
-  labels:
-    name:  qotd
+  name: quotes
 spec:
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: quotes
+  replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        name:  qotd
+        app: quotes
     spec:
       containers:
-      - image:  pnbrown/impact-qotd:v1.0.1
-        name:  qotd
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128M"
-          limits: 
-            cpu: "100m"
-            memory: "128M"
-        imagePullPolicy: Always
-      restartPolicy: Always
+      - name: quotes54
+        image: pnbrown/quotes54:latest
+        ports:
+        - containerPort: 80
