@@ -72,7 +72,7 @@ IBM Cloud gives you a free image registry.
 Go to cloud shell
 
 ```
-https://workshop.shell.cloud.ibm.com/
+https://cloud.ibm.com/shell
 ```
 
 If it asks for a key use `ikslab`.
@@ -86,7 +86,7 @@ ibmcloud ks clusters
 This would list all the clusters. You should see only one.
 
 ```
-ibmcloud ks cluster-config -c $CLUSTER-NAME
+ibmcloud ks cluster config -c $CLUSTER-NAME
 ```
 
 This will print a `export KUBECONFIG=...` command. Copy and paste that in your terminal.
