@@ -1,19 +1,21 @@
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: quotes
+  name: qotd
+  labels:
+    app: qotd
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: quotes
-  replicas: 1 # tells deployment to run 2 pods matching the template
+      app: qotd
   template:
     metadata:
       labels:
-        app: quotes
+        app: qotd
     spec:
       containers:
-      - name: quotes54
-        image: pnbrown/quotes54:latest
+      - name: qotd
+        image: moficodes/python-quotes:v1.0.0
         ports:
-        - containerPort: 80
+        - containerPort: 8080
